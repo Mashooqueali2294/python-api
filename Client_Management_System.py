@@ -12,7 +12,7 @@ class Clients(SQLModel, table=True):
     status: str
     create_at: datetime | None= Field(default_factory=datetime.utcnow, index=True)
 
-postgres_url = "postgresql://postgres:Mashooque2294@localhost/postgres"
+postgres_url = "postgresql://postgres:password123@localhost/postgres"
 engine = create_engine(postgres_url, echo=True)
 
 def create_db_and_table():
